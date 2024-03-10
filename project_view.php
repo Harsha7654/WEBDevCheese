@@ -1,13 +1,19 @@
 <!doctype html>
-<?php require_once "../contoller/project.php" ?>
 <html>
 <head>
     <h1> No Cheese For the Wicked </h1>
     <h6> Created by Harshith Pachhipulusu </h6>
 <form method="post" action="project.php">
-Search for Cheese:
-<input name="search"/>
-<input type="submit" value="Search"/>
+Search Cheese by Name:
+<input name="searchn"/> <input type="submit" value="Search"/> <br/> <br/>
+Search Cheese by Build:
+<input name="searchhs"/> <input type="submit" value="Search"/> <br/> <br/>
+Search Cheese by Origin:
+<input name="searcho"/> <input type="submit" value="Search"/> <br/> <br/>
+Search Cheese By Strength:
+<input name="searchs"/> <input type="submit" value="Search"/> <br/> <br/>
+Search Cheese By Price:
+<input name="searchp"/> <input type="submit" value="Search"/> <br/> <br/>
 </form>
 <title>No Cheese for the Wicked</title> 
 </head>
@@ -15,6 +21,7 @@ Search for Cheese:
 <a href="basketlist_view.php">
     <img src="C:\Users\phani\Pictures\free-add-to-basket-icon-3042-thumb.png" > 
     Opens Basket</a>
+<hr/>
 <table>
 <thead>
 <tr>
@@ -33,14 +40,14 @@ Search for Cheese:
 <td><?= $cheese->origin ?></td>
 <td><?= $cheese->strength ?></td>
 <td><?= $cheese->price ?></td>
+<td><a href="project.php?addtobasket=<?= $cheese->id ?>">Add to Basket</a></td>
 </tr>
 <?php endforeach ?>
 </tbody>
 </table>
-<ul>
-<?php foreach ($_SESSION["previousSearch"] as $search): ?>
-<li><?=$search?></li>
-<?php endforeach ?>
-</ul>
+<hr/>
+<a href = "project.php"> Clear search</a>
+<hr/>
+<?= count($basket) ?> item(s) added. <a href="../contoller/basket.php">Show Basket</a>
 </body>
 </html>
