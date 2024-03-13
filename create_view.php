@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<?php require_once "../contoller/login.php" ?>
+<?php require_once "../contoller/create.php" ?>
 <html>
 <head>
-<h1>Login Page!<h1>
-<title>Login</title>
+<h1>Registration Page!<h1>
+<title>Create Page</title>
 </head>
 <body>
 <h3>Create an Account: </h3>
@@ -17,3 +17,4 @@
     <input type="submit" value="Create an Account" />
 </form>
 </body>
+</html>
