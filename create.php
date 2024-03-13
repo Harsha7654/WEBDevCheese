@@ -30,5 +30,5 @@ if(isset($_REQUEST["formFieldForName"]) && isset($_REQUEST["formFieldForUserName
 
 
 
-require_once "../view/login_view.php";
+require_once "../view/create_view.php";
 ?>
